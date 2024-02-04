@@ -17,9 +17,76 @@ public  class AbstrakAmaliy {
         Rectangle2 rectangle=new Rectangle2();
         System.out.println("To'rtburchak yuzi: "+rectangle.area(4,5));
         System.out.println("To'rtburchak perimetri: "+rectangle.perimetr(4,5));
+
+
+        //*************************************************************************************
+        //2-amaliy
+
+        System.out.println("\n\n");
+        Animal dog=new Dog();
+        dog.getName();
+        dog.sound();
+        System.out.println("\n");
+
+        Animal duck=new Duck();
+        duck.getName();
+        duck.sound();
+        System.out.println("\n");
+
+        Animal cat=new Cat();
+        cat.getName();
+        cat.sound();
+
+
     }
 }
 
+
+
+//2-amaliy
+abstract class Animal{
+    public abstract void sound();
+    public abstract void getName();
+}
+
+class Dog extends Animal{
+    @Override
+    public void sound() {
+        System.out.println("bow bow");
+    }
+
+    @Override
+    public void getName() {
+        System.out.println("It nomi: Roy");
+    }
+}
+
+class Duck extends Animal{
+    @Override
+    public void sound() {
+        System.out.println("quack quack");
+    }
+
+    @Override
+    public void getName() {
+        System.out.println("O'rdak nomi: Skruj");
+    }
+}
+
+class Cat extends Animal{
+    @Override
+    public void getName() {
+        System.out.println("Mushuk nomi: Muosh");
+    }
+
+    @Override
+    public void sound() {
+        System.out.println("meow meow");
+    }
+}
+
+
+//1-amaliy vazifa
 abstract class GeometricFigure2{
     public abstract double area(double a,double b, double c);
     public abstract double area(double a,double b);
